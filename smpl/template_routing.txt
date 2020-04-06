@@ -1,0 +1,97 @@
+Team <TeamName> 
+<Member0> and sidekick <Ducky0>
+<Member1> and sidekick <Ducky1>
+<Member2> and sidekick <Ducky2>
+IntroCS pd<#>
+Spring 2020
+
+
+Step 0: 
+ Settle in. 
+ Engage biological thinking apparatus.
+ Initiate ducky comms. 
+ Initiate team comms.
+ Open a command prompt / terminal window. 
+ Refresh self on notes from bashcrawl and related CLI explorations...
+
+
+TASK:
+Refer to networking-related HWs and your notes to answer these questions as a trio. If you cannot immediately answer a Q,
+a) discuss with one another, duck squad
+b) review notes, related HW
+c) cautiously dip toes in intertrash. Use teammates to prevent drowning, or worse: distraction
+d) 
+
+
+1. If your machine has >1 IP interface, which one are you currently using, and how do you know?
+--------------------------------------------
+
+============================================
+
+
+
+2. How did you find your router’s IP addresses? How did you recognize it when you found it?
+--------------------------------------------
+
+============================================
+
+
+TASK:
+Experiment with the ping command in your terminal....
+
+How does it work?
+--------------------------------------------
+
+============================================
+
+
+What do you make of what you see?
+--------------------------------------------
+
+============================================
+
+
+TASK:
+Experiment with these commands in your terminal....
+win: tracert
+posix: traceroute
+
+
+4. What happens you ping your teammates' home IP address from your current machine?
+--------------------------------------------
+
+============================================
+
+
+...and how do you explain what you see?
+--------------------------------------------
+
+============================================
+
+
+5. What does "proxy" mean? (Fine if you want to look up the dictionary definition, but cite your source if so, and then produce your own working defintion in simplest possible terms.)
+--------------------------------------------
+
+============================================
+
+
+6. If you "google my IP address" from a lab workstation, why does google tell you your address is 149.89.1.30?
+--------------------------------------------
+
+============================================
+
+
+42. Why does a router need 2 IP addresses?
+--------------------------------------------
+
+============================================
+
+
+
+
+Notes:
+--------------------------------------------
+
+============================================
+
+
