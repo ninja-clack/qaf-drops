@@ -1,1 +1,9 @@
-foo
+USAGE: 
+
+In each lab's folder, either
+a) use a secondary click (right-click, or 2-finger trackpad tap, etc.) on a filename to bring up context menu, select "save link as" or equivalent...
+b) use a primary click (left-click, single-finger trackpad tap, etc.) on a filename to have your browser render within github. Then click Download button...
+...to download to your local machine.
+
+Then open your locally-saved PDF in your favorite viewer (Evince, Acrobat Reader, Preview, web browser, Word, LibreOffice, etc.)
+
