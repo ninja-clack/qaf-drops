@@ -1,0 +1,98 @@
+;clear the world.
+to patch-setup
+  ca
+end
+
+
+
+to checkerboard
+  ifelse (pxcor + pycor) mod 2 = 0
+  [
+    set pcolor red
+  ]
+  [
+    set pcolor blue
+  ]
+end
+
+;color each patch in the world 1 of 2 colors 
+;in a chess/checkerboard pattern.
+to checkerboard-helper [color1 color2]
+  ifelse (pxcor + pycor) mod 2 = 0
+  [
+    set pcolor color1
+  ]
+  [
+    set pcolor color2
+  ]
+end
+
+to checkerboard
+  checkerboard-helper red black
+end
+
+
+;color approximately coverage percentage of 
+;world's patches yellow
+to sprinkle
+  if (random 100 < coverage)
+  [
+    set pcolor yellow
+  ]
+end
+
+
+
+;color every patch in the world 1 of 4 possible colors
+;with a 25% chance of each.
+to cuatroColores-helper [color0 color1 color2 color3]
+  ifelse random 2 < 1
+  [
+    ifelse random 2 < 1 [
+      set pcolor color0
+    ]
+    [
+      set pcolor color1
+    ]
+  ]
+  [
+    ifelse random 2 < 1 [
+      set pcolor color2
+    ]
+    [
+      set pcolor color3
+    ]
+  ]
+end
+
+
+to cuatroColores
+  cuatroColores-helper cyan blue pink magenta
+end
+
+
+to-report num-patches-of-color [c]
+  report count patches with [pcolor = c]
+end
+
+
+to-report percent-patches-of-color [c]
+  report count patches with [pcolor = c]
+         / count patches * 100
+end
+
+
+~ ~ ~
+
+
+to-report tallyCo [colorToCount]
+  report count patches with [pcolor = colorToCount]
+end
+
+to-report num-patches-of-color [c]
+  report tallyCo c
+end
+
+to-report percent-patches-of-color [c]
+  report (tallyCo c) / count patches * 100
+end

@@ -1,0 +1,9 @@
+to colorize3
+  set pcolor (pxcor * 2) ;creates cool columns
+end
+
+
+to colorize3
+  set pcolor (pxcor + pycor)
+end
+
