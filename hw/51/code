@@ -1,0 +1,76 @@
+patches-own [origColor]
+
+;clear the world, place n turtles at random locations
+to setup
+  ca
+  setup-turtle
+  ask patches with [pcolor = black]
+  [
+      set pcolor 5 + 10 * random colors
+  ]
+  ask patches [ set origColor pcolor ]
+end
+
+
+to setupEqual
+  ca
+  setup-turtle
+  ask n-of (count patches / 3) patches with [pcolor = black]
+  [
+    set pcolor cyan
+  ]
+  ask n-of (count patches / 3) patches with [pcolor = black]
+  [
+    set pcolor violet
+  ]
+  ask n-of (count patches / 3) patches with [pcolor = black]
+  [
+    set pcolor yellow
+  ]
+  ask patches [ set origColor pcolor ]
+end
+
+
+to setup-turtle
+  cro 1 [
+    set color pink
+  ]
+end
+
+
+;wiggle instructs a turtle in the world to wander randomly, moving forward stride_length units each step.
+to wiggle [swerve stride]
+  lt random swerve
+  rt random swerve
+  fd stride
+end
+
+
+to make-halo
+  set pcolor origColor
+  ask neighbors
+  [
+    set origColor pcolor
+    set pcolor black
+  ]
+end
+
+
+to-report num-patches-of-color [what-color]
+  report count patches with [pcolor = what-color]
+end
+
+
+to go
+  wait .1
+  ask patches
+  [
+    if pcolor != origColor [ set pcolor origColor ]
+  ]
+  ask turtles
+  [
+    wiggle 15 1
+    make-halo
+  ]
+end
+
