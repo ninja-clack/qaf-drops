@@ -1,0 +1,7 @@
+to go
+  ask patches [set pcolor [pcolor] of one-of patches]
+end
+
+to golocal
+  ask patches [set pcolor [pcolor] of one-of neighbors]
+end
